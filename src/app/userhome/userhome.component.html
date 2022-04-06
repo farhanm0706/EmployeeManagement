@@ -1,0 +1,140 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <div id="navbar">
+        <ul>
+            <li><a class="renew" (click)="changeView1()"><i class="fa-solid fa-user"></i>User</a></li>
+            <li><a class="same" (click)="homeVisible()" routerLink="./uhome">Home</a></li>
+            <li><a class="same" (click)="passwordVisible()" routerLink="adminhome">Change Password</a></li>
+            <li><a class="same" (click)="contactVisible()" routerLink="contactus">Contact Us</a></li>
+            <li><a routerLink="/login" (click)="changeView()" class="btn by "><i class="fa-solid fa-user-minus"></i>Logout</a>
+            </li>
+        </ul>
+    </div>
+    <img *ngIf="imgVisible" src="https://blog.bonus.ly/hubfs/employee-experience-featured-image.png" alt="Image">
+
+    <div class="container" *ngIf="form">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="text-center">
+                        <h1>Update your details Here</h1>
+                    </div>
+                    <form>
+                        <form>
+                            <h5>Personal Details</h5>
+                            <div class="mb-3">
+                                <label for="name">Full Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter Full Name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="mobile">Mobile Number</label>
+                                <input type="number" class="form-control" id="mobile" placeholder="Enter Mobile Number">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter Email Address">
+                            </div>
+                            <div class="mb-3">
+                                <h5>Family Details</h5>
+
+                                <label for="father">Father Name</label>
+                                <input type="text" class="form-control" id="father" placeholder="Enter Father Name ">
+                            </div>
+                            <div class="mb-3">
+                                <label for="mother">Mother Name</label>
+                                <input type="text" class="form-control" id="moter" placeholder="Enter Mother Name ">
+                            </div>
+                            <h5>Banking related Details</h5>
+
+                            <div class="mb-3">
+                                <label for="aadhar">Aadhar Number</label>
+                                <input type="number" class="form-control" id="aadhar"
+                                    placeholder="Enter Aadhar Number ">
+                            </div>
+                            <div class="mb-3">
+                                <label for="pan">Pan Card Number</label>
+                                <input type="text" class="form-control" id="pan" placeholder="Enter PAN Number ">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="acc">Account Number</label>
+                                <input type="number" class="form-control" id="acc" placeholder="Enter Account Number ">
+                            </div>
+                            <div class="mb-3">
+                                <label for="ifsc">IFSC Number</label>
+                                <input type="text" class="form-control" id="ifsc" placeholder="Enter IFSC Number ">
+                            </div>
+                            <br>
+                            <button type="reset" id="btn2" class="btn  btn-primary">Reset</button>
+
+                            <button type="submit" id="btn1" class="btn btn-primary " (click)="updateDetails()"><i class="fa-solid fa-marker"></i>
+                                Update</button>
+                            <br><br><br><br>
+                            <a id="a1" class="btn btn-primary" routerLink="userhome"><i
+                                    class="fa-solid fa-circle-arrow-left"></i> Go Back</a>
+                        </form>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div *ngIf="form2" class="contact">
+        <h2>Lets Start a conversation</h2>
+        <h3>Ask how we can help you</h3>
+        <br>
+        <form class="contactform">
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput2">Full Name</label>
+                <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Enter your Name">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Suggestion Please</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                    placeholder="Enter your feedback"></textarea>
+            </div>
+            <button type="submit" id="contactbtn" (click)="fun()" class="btn btn-primary ">Submit</button>
+
+        </form>
+
+    </div>
+    <br>
+
+    <div *ngIf="form3" class="passwordform">
+        <form action="">
+            <div class="form-group">
+                <label for="old">Old Password</label><br>
+                <input type="password" class="form-control" id="old" placeholder="Enter the Old password">
+            </div>
+            <div class="form-group">
+                <label for="new">New Password</label><br>
+                <input type="password" class="form-control" id="new" placeholder="Enter the Old password">
+            </div>
+            <div class="form-group">
+                <label for="confirm">Confirm new Password</label><br>
+                <input type="password" class="form-control" id="confirm" placeholder="Confirm password">
+            </div>
+            <br>
+            <button type="submit" id="passbtn" class="btn btn-primary">Update Password</button>
+            <br><br>
+        </form>
+       
+    </div>
+<br><br>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+div{
+    margin-left: 25%;
+    background-color: rgb(214, 231, 247);
+    width: 750px;
+    height: 350px;
+    margin-top: 12%;
+    border-radius: 5px;
+    padding: 40px;
+    opacity: 0.7;
+}
+
+
+h2{
+    margin-left:35%;
+}
+h3{
+    margin-left: 37%;
+}
+a{
+    color: black;
+}
+h1{
+    margin-left: 40px;
+}
+
